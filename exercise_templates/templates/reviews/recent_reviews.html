@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recent reviews</title>
+</head>
+<body>
+    <main class="Books">
+        <h1>Recent reviews</h1>
+    </main>
+    <div>
+        {% for review in reviews %}
+            <h2>Review by {{ review.author }}</h2>
+            <p>{{ review.body }}</p>
+            <span>Posted at {{ review.created_at|date:"d-M-Y H:m:s" }}</span>
+        {% empty %}
+            <h2>No books here...</h2>
+        {% endfor %}
+</body>
+</html>
