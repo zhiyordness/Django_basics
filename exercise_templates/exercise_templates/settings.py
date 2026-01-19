@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 PROJECT_APPS = [
     'books',
     'reviews',
+    'common',
 ]
 # Application definition
 

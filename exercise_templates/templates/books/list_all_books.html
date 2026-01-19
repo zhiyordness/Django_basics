@@ -1,22 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title> List of books </title>
-</head>
-<body>
-    <main class="Books">
-        <h1>List of all books</h1>
-    </main>
-    <div>
-        {% for book in books %}
-            <h2>{{ book.title }}</h2>
-            <a href="{% url 'book_details' pk=book.pk %}" >Book's info</a>
-            <br>
-            <img src="{{ book.image_url }}" width="400" alt="{{ book.title }} cover">
-        {% empty %}
-            <h2>No books here...</h2>
-        {% endfor %}
-    </div>
-</body>
-</html>  
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="Books">
+    <h1 class="card">List of all books</h1>
+</main>
+<div>
+    {% for book in books %}
+        <h2>{{ book.title }}</h2>
+        <a href="{% url 'books:book_details' slug=book.slug %}" >Book's info</a>
+        <br>
+        <img src="{{ book.image_url }}" width="400" alt="{{ book.title }} cover">
+    {% empty %}
+        <h2>No books here...</h2>
+    {% endfor %}
+</div>
+
+{% endblock %}

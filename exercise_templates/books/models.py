@@ -1,11 +1,13 @@
 from django.core.validators import MinLengthValidator
 from django.db import models
+from django.utils.text import slugify
 
 from choices import BookGenreChoices
+from common.models import TimeStampModel
 
 
 # Create your models here.
-class Book(models.Model):
+class Book(TimeStampModel):
 
     title = models.CharField(
         max_length=50,
@@ -17,9 +19,6 @@ class Book(models.Model):
     )
     isbn = models.CharField(
         max_length=12,
-        validators=[
-            MinLengthValidator(12)
-        ],
         unique=True,
     )
     genre = models.CharField(
@@ -30,13 +29,19 @@ class Book(models.Model):
     publishing_date = models.DateField()
     description = models.TextField()
     image_url = models.URLField()
-    slug = models.CharField(
+    slug = models.SlugField(
         max_length=100,
-        unique=True
+        unique=True,
+        blank=True
     )
-    updated_at = models.DateTimeField(
-        auto_now=True
+    publisher = models.CharField(
+        max_length=50
     )
 
     def __str__(self):
         return self.title
+
+    def  save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(f"{self.title} - {self.publisher}")
+        super().save(*args, **kwargs)
