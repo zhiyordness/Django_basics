@@ -1,10 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+{% load markdown_extras %}
+
+{% block custom_css %}
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    {{ block.super }}
+<div class="posts">
+        {% for post in posts %}
+            <div class="post">
+            <h2>{{ post.title |lower| capfirst }}</h2>
+                {% if post.content %}
+            <p>{{ post.content|markdown }}</p>
+                {% else %}
+                <p>{% lorem 3 p %}</p>
+                {% endif %}
+            <span> {{ post.author | default:'Someone' }} posted it at {{ post.created_at|date:'D-d.M.Y' }}</span>
+            {% empty %}
+                <h2>No post to show ...</h2>
+            </div>
+        {% endfor %}
+</div>
+ {% endblock %}

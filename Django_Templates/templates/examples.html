@@ -1,10 +1,55 @@
+{% load markdown_extras %}
+{% load current_time %}
+{% load user_info %}
+{% load get_recent_posts %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Posts</title>
 </head>
 <body>
-$END$
+    {% include 'nav.html' %}
+
+{#    <div class="container">#}
+{#        <div class="posts">#}
+{#            <div class="post">#}
+{#                <h2>{{ post.title | lower | capfirst}}</h2>#}
+{#                <p>{{ post.content | truncatewords:2 }}</p>#}
+{#                <span>Posted by {{ post.author | default:'Anonymous' }} at {{ post.created_at | date:'D-d-M-Y' }}</span>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+
+    <div class="content">
+        <h1>{% current_time %}</h1>
+        <div class="posts">
+                {% for post in posts %}
+                    <div class="post">
+                    <h2>{{ post.title |lower| capfirst }}</h2>
+                        {% if post.content %}
+                    <p>{{ post.content|markdown }}</p>
+                        {% else %}
+                        <p>{% lorem 3 p %}</p>
+                        {% endif %}
+                    <span> {{ post.author | default:'Someone' }} posted it at {{ post.created_at|date:'D-d.M.Y' }}</span>
+                    {% empty %}
+                        <h2>No post to show ...</h2>
+                    </div>
+                {% endfor %}
+
+        {% user_info %}
+
+        {% get_recent_posts 2 recent_posts %}
+
+        {% for p in recent_posts %}
+            <p>{{ p.title }}</p>
+        {% endfor %}
+
+        <a href="{% url 'dashboard' pk=2 %}">Click me</a>
+        </div>
+    </div>
 </body>
 </html>
