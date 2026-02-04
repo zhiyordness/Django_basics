@@ -1,6 +1,7 @@
 from django.contrib import admin
+from django.template.library import TagHelperNode
 
-from books.models import Book
+from books.models import Book, Tag
 from reviews.models import Review
 
 
@@ -11,8 +12,6 @@ class BookAdmin(admin.ModelAdmin):
     list_filter = ['title', 'genre', 'price']
     search_fields = ['title', 'genre', 'price']
 
-@admin.register(Review)
-class ModelNameAdmin(admin.ModelAdmin):
-    list_display = ['author', 'body', 'book']
-    list_filter = ['author', 'body', 'book']
-    search_fields = ['author', 'body', 'book']
+@admin.register(Tag)
+class TagAdmin(admin.ModelAdmin):
+    ...

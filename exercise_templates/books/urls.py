@@ -1,16 +1,19 @@
-
-
 from django.urls import path, include
+from books.views import landing_page, books_list, book_detail, book_create, book_edit, book_delete
 
-from books import views
+app_name = 'books'
 
+books_patterns = [
+    path('', books_list, name='list'),
+    path('create/', book_create, name='create'),
+    path('<int:pk>/', include([
+        path('edit/', book_edit, name='edit'),
+        path('delete/', book_delete, name='delete'),
+    ])),
+    path('<slug:slug>/', book_detail, name='details'),
+]
 
-app_name='books'
-books_urls = [
-        path('list/',views.list_all_books, name='list_books' ),
-        path('/<slug:slug>/', views.book_details, name='book_details')
-    ]
 urlpatterns = [
-    path('', views.landing_page, name='landing_page'),
-    path('books/', include(books_urls)),
+    path('', landing_page, name='home'),
+    path('books/', include(books_patterns)),
 ]
