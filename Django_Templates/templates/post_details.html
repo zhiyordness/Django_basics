@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load crispy_forms_filters %}
+
 {% load markdown_extras %}
 
 {% block content %}
@@ -10,11 +12,26 @@
     {% if post.content %}
         <p>{{ post.content|markdown }}</p>
     {% else %}
-        <p>{% lorem 3 p %}</p>
+        <p>No content</p>
     {% endif %}
 
     <span>
         {{ post.author | default:'Someone' }} posted it at {{ post.created_at|date:'D-d.M.Y' }}
     </span>
+    </div>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ formset.management_form }}
+        <div class="inline-group">
+            {% for form in formset %}
+                {{ form | crispy }}
+                <div class="inline-group-append">
+                    <button class="btn btn-primary ml-2" type="submit">Post</button>
+                </div>
+            {% endfor %}
+        </div>
+    </form>
+
 </div>
 {% endblock %}

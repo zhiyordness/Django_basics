@@ -1,11 +1,9 @@
-from django.urls import path, re_path
+from django.urls import path
 
-from review.views import recent_reviews, detail_view, reviews_by_year
+from review.views import recent_reviews, detail_view
 
 app_name = 'review'
 urlpatterns = [
     path('', recent_reviews, name='list'),
-    re_path(r'^(?P<year>20\d{2})/$', reviews_by_year, name='list-year'),
-    path('details/<int:pk>/', detail_view, name='detail'),
-
+    path('<int:pk>/', detail_view, name='detail'),
 ]

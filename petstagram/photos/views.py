@@ -1,11 +1,19 @@
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, redirect
+from django.views import View
 
 from photos.forms import PhotoForm
 from photos.models import Photo
 
 
 # Create your views here.
+class IndexView(View):
+    def get(self, request: HttpRequest) -> HttpResponse:
+        return HttpResponse('Hello from Photos app!')
+
+    def post(self, request: HttpRequest) -> HttpResponse:
+        return HttpResponse('Hello from Photos app!')
+
 
 def photo_add(request: HttpRequest) -> HttpResponse:
     form = PhotoForm(request.POST or None, request.FILES or None)

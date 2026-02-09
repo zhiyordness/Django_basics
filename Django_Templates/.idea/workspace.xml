@@ -5,23 +5,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71945494-ece1-4670-ab25-755ec1b5bf9f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Django_Templates.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Django_Templates.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/data_source_mapping.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/data_source_mapping.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/templatetags/current_time.py" beforeDir="false" afterPath="$PROJECT_DIR$/posts/templatetags/current_time.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/templatetags/get_recent_posts.py" beforeDir="false" afterPath="$PROJECT_DIR$/posts/templatetags/get_recent_posts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/templatetags/markdown_extras.py" beforeDir="false" afterPath="$PROJECT_DIR$/posts/templatetags/markdown_extras.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/templatetags/user_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/posts/templatetags/user_info.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts/choices.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts/mixins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts/validators.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/add_post.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/edit_post.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/search-form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_forms_basics/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_forms_basics/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_forms_basics/.idea/copilot.data.migration.ask.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_forms_basics/.idea/copilot.data.migration.ask2agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_forms_basics/.idea/copilot.data.migration.edit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_forms_basics/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_forms_basics/.idea/data_source_mapping.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_forms_basics/.idea/exercise_forms_basics.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_forms_basics/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_forms_basics/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_forms_basics/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_forms_basics/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_forms_basics/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_forms_basics/books/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_forms_basics/reviews/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_templates/books/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_templates/common/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_templates/reviews/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_templates/templates/books/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_templates/templates/books/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise_templates/templates/books/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b19dde55-8c3a-40a9-981d-1bb539e32192.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b19dde55-8c3a-40a9-981d-1bb539e32192.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b19dde55-8c3a-40a9-981d-1bb539e32192/storage_v2/_src_/database/new_templates.Wt8R2Q/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b19dde55-8c3a-40a9-981d-1bb539e32192/storage_v2/_src_/database/new_templates.Wt8R2Q/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django_Templates/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django_Templates/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django_Templates/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django_Templates/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/posts/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/posts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/posts/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/posts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/examples.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/examples.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nav.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/post_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user_info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../djangointroduction/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../djangointroduction/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise_templates/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise_templates/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise_templates/books/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise_templates/books/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise_templates/books/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise_templates/books/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise_templates/books/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise_templates/books/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise_templates/books/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise_templates/books/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise_templates/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise_templates/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise_templates/templates/books/book_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise_templates/templates/books/book_details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exercise_urls_views/destination/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise_urls_views/destination/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exercise_urls_views/exercise_urls_views/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise_urls_views/exercise_urls_views/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exercise_urls_views/exercise_urls_views/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise_urls_views/exercise_urls_views/urls.py" afterDir="false" />
@@ -31,6 +63,7 @@
       <change beforePath="$PROJECT_DIR$/../exercise_urls_views/templates/review/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise_urls_views/templates/review/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exercise_urls_views/templates/review/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise_urls_views/templates/review/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exersicedjangointro/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exersicedjangointro/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../petstagram/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../petstagram/.idea/vcs.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +78,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="Python Script" />
         <option value="HTML File" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -146,6 +179,12 @@
       <workItem from="1768662097748" duration="1253000" />
       <workItem from="1768666145460" duration="9000" />
       <workItem from="1768666538909" duration="4782000" />
+      <workItem from="1769705188981" duration="12000" />
+      <workItem from="1769705242611" duration="2256000" />
+      <workItem from="1769715606465" duration="21000" />
+      <workItem from="1769715683814" duration="13000" />
+      <workItem from="1769848495521" duration="17000" />
+      <workItem from="1769848551930" duration="21475000" />
     </task>
     <servers />
   </component>

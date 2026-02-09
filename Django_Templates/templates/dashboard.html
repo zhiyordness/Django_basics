@@ -12,18 +12,25 @@
 {% block content %}
     {{ block.super }}
 <div class="posts">
+        {% include 'search-form.html' %}
         {% for post in posts %}
+            <a class="post-url" href="{% url 'details-post' pk=post.pk%}">
             <div class="post">
+                {% if post.image %}
+                    <img src="{{ post.image.url }}" width="200" height="480" class="img-fluid">
+                {% endif %}
             <h2>{{ post.title |lower| capfirst }}</h2>
-                {% if post.content %}
-            <p>{{ post.content|markdown }}</p>
+               </a>
+                {% if post.description %}
+                    <p>{{ post.description|markdown }}</p>
                 {% else %}
-                <p>{% lorem 3 p %}</p>
+                    <p>Nothing here...</p>
                 {% endif %}
             <span> {{ post.author | default:'Someone' }} posted it at {{ post.created_at|date:'D-d.M.Y' }}</span>
+            </div>
+         
             {% empty %}
                 <h2>No post to show ...</h2>
-            </div>
         {% endfor %}
 </div>
  {% endblock %}

@@ -5,3 +5,4 @@ django-mixins==0.0.10
 pillow==12.1.0
 psycopg2-binary==2.9.11
 sqlparse==0.5.5
+Faker==25.2.0

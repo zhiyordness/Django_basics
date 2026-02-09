@@ -16,7 +16,6 @@ class Book(TimeStampModel):
         MYSTERY = 'Mystery', 'Mystery'
 
     title = models.CharField(
-        unique=True,
         max_length=100,
     )
 
@@ -29,8 +28,7 @@ class Book(TimeStampModel):
     )
 
     isbn = models.CharField(
-        unique=True,
-        max_length=12,
+        max_length=13,
     )
 
     cover_image = models.ImageField(null=True, blank=True)
@@ -67,7 +65,7 @@ class Book(TimeStampModel):
 
     def save(self, *args, **kwargs) -> None:
         if not self.slug:
-            self.slug = slugify(f"{self.title}-{self.publisher}")
+            self.slug = slugify(f"{self.title}-{self.publisher}-{self.isbn}")
 
         super().save(*args, **kwargs)
 
